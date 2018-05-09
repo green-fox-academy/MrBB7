@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="eng">
+    
+    <head>
+       
+        <div class="logo">
+             <img src="ases.svg" alt="ases.svg" align="left">
+        </div>
+            <div class="links">
+       <a href="https://hu.wikipedia.org/wiki/Vasember_(k%C3%A9preg%C3%A9nyszerepl%C5%91)">HOME</a>
+       <a href="WIKI">WIKI</a>
+       <a href="GITHUB">GITHUB</a>
+       <a href="LINKEDIN">LINKEDIN</a>
+             </div>
+           
+        <link rel="stylesheet" href="tonystark.css" type="text/css">
+     </head>
+
+<body>
+    <div class="padding">
+    <h1>Balázs Bence</h1>
+   
+     <h3>Backend softwere developer</h3>
+        <div class="first">
+       <p>
+           I love to design complex systems with high  levels of automation including AI and robotics. I'm deeply intereseted in inventing new things that can augment the human experience.
+        </p>
+        <p>
+           Everything I've done, everything I'll do today, everything I'll ever do, I do to protect this world. Someone once told me that with great power comes great responsibility.
+       </p>
+            </div>
+        
+        <p class="separator">- - -</p>
+        
+        <div class="second">
+       <h2>Technology Wiki</h2>
+        <h4>Instruction set</h4>
+        <p>
+            All computers run using very low-level commands which do some very basic functions, such as reading data, writing data, jumping to addresses, and calculating basic arithmetic.(The complete list of commands that can be run by a CPU is know that etc.) 
+       </p>
+            </div>
+    </div>
+</body>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
