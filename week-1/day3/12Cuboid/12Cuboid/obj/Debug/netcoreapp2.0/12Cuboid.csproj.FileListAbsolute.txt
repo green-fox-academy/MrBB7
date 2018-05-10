@@ -1,0 +1,11 @@
+C:\Users\user\source\repos\12Cuboid\12Cuboid\obj\Debug\netcoreapp2.0\12Cuboid.csprojAssemblyReference.cache
+C:\Users\user\source\repos\12Cuboid\12Cuboid\obj\Debug\netcoreapp2.0\12Cuboid.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\12Cuboid\12Cuboid\obj\Debug\netcoreapp2.0\12Cuboid.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\12Cuboid\12Cuboid\obj\Debug\netcoreapp2.0\12Cuboid.AssemblyInfo.cs
+C:\Users\user\source\repos\12Cuboid\12Cuboid\bin\Debug\netcoreapp2.0\12Cuboid.deps.json
+C:\Users\user\source\repos\12Cuboid\12Cuboid\bin\Debug\netcoreapp2.0\12Cuboid.runtimeconfig.json
+C:\Users\user\source\repos\12Cuboid\12Cuboid\bin\Debug\netcoreapp2.0\12Cuboid.runtimeconfig.dev.json
+C:\Users\user\source\repos\12Cuboid\12Cuboid\bin\Debug\netcoreapp2.0\12Cuboid.dll
+C:\Users\user\source\repos\12Cuboid\12Cuboid\bin\Debug\netcoreapp2.0\12Cuboid.pdb
+C:\Users\user\source\repos\12Cuboid\12Cuboid\obj\Debug\netcoreapp2.0\12Cuboid.dll
+C:\Users\user\source\repos\12Cuboid\12Cuboid\obj\Debug\netcoreapp2.0\12Cuboid.pdb
