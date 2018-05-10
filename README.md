@@ -5,3 +5,5 @@ depo of Bence Balazs Fulvipes Ocelot
 
 [First lesson repo] (https://github.com/MrBB7/git-lesson-repository.git)
 
+[Webpage with first day html task] 
+(https://github.com/MrBB7/MrBB7.github.io.git)
