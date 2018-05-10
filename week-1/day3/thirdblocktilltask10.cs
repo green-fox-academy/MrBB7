@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace ConsoleApp6
+namespace ConsoleApp7
 {
-    class thirdblock
+    class Program
     {
-        static void Swap(string[] args)
+        static void Main(string[] args)
         {
             Console.WriteLine("Task07");
             Console.WriteLine();
@@ -26,7 +26,27 @@ namespace ConsoleApp6
             Console.Write("\nAfter Swapping : ");
             Console.Write("\nFirst Number : " + number1);
             Console.Write("\nSecond Number : " + number2);
+
+            Console.WriteLine();
+            Console.WriteLine("Task09");
+            Console.WriteLine();
+
+            double massInKg = 81.2;
+            double heightInM = 1.78;
+            double BMI;
+
+            BMI = massInKg / (heightInM * heightInM);
+            Console.WriteLine("The BMI index is: " + BMI);
             Console.Read();
+
+            Console.WriteLine();
+            Console.WriteLine("Task10");
+
+            string myName = "Bence";
+            int myAge = 23;
+            double myHeight = 1.84;
+            bool myMaritalStatus = false;
+
         }
     }
 }
