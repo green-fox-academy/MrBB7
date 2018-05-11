@@ -670,11 +670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\source\\repos\\MileToKilometerConv\\MileToKilometerConv\\MileToKilometerConv.csproj",
+      "projectUniqueName": "E:\\GreenFox\\MrBB7\\week1\\day2\\greenfox\\MrBB7\\week-1\\day3\\MileToKilometerConv\\MileToKilometerConv\\MileToKilometerConv.csproj",
       "projectName": "MileToKilometerConv",
-      "projectPath": "C:\\Users\\user\\source\\repos\\MileToKilometerConv\\MileToKilometerConv\\MileToKilometerConv.csproj",
+      "projectPath": "E:\\GreenFox\\MrBB7\\week1\\day2\\greenfox\\MrBB7\\week-1\\day3\\MileToKilometerConv\\MileToKilometerConv\\MileToKilometerConv.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\source\\repos\\MileToKilometerConv\\MileToKilometerConv\\obj\\",
+      "outputPath": "E:\\GreenFox\\MrBB7\\week1\\day2\\greenfox\\MrBB7\\week-1\\day3\\MileToKilometerConv\\MileToKilometerConv\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

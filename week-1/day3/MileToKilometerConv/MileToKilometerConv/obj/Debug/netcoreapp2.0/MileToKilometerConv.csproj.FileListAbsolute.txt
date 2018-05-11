@@ -9,3 +9,14 @@ C:\Users\user\source\repos\MileToKilometerConv\MileToKilometerConv\bin\Debug\net
 C:\Users\user\source\repos\MileToKilometerConv\MileToKilometerConv\bin\Debug\netcoreapp2.0\MileToKilometerConv.pdb
 C:\Users\user\source\repos\MileToKilometerConv\MileToKilometerConv\obj\Debug\netcoreapp2.0\MileToKilometerConv.dll
 C:\Users\user\source\repos\MileToKilometerConv\MileToKilometerConv\obj\Debug\netcoreapp2.0\MileToKilometerConv.pdb
+E:\GreenFox\MrBB7\week1\day2\greenfox\MrBB7\week-1\day3\MileToKilometerConv\MileToKilometerConv\bin\Debug\netcoreapp2.0\MileToKilometerConv.deps.json
+E:\GreenFox\MrBB7\week1\day2\greenfox\MrBB7\week-1\day3\MileToKilometerConv\MileToKilometerConv\bin\Debug\netcoreapp2.0\MileToKilometerConv.runtimeconfig.json
+E:\GreenFox\MrBB7\week1\day2\greenfox\MrBB7\week-1\day3\MileToKilometerConv\MileToKilometerConv\bin\Debug\netcoreapp2.0\MileToKilometerConv.runtimeconfig.dev.json
+E:\GreenFox\MrBB7\week1\day2\greenfox\MrBB7\week-1\day3\MileToKilometerConv\MileToKilometerConv\bin\Debug\netcoreapp2.0\MileToKilometerConv.dll
+E:\GreenFox\MrBB7\week1\day2\greenfox\MrBB7\week-1\day3\MileToKilometerConv\MileToKilometerConv\bin\Debug\netcoreapp2.0\MileToKilometerConv.pdb
+E:\GreenFox\MrBB7\week1\day2\greenfox\MrBB7\week-1\day3\MileToKilometerConv\MileToKilometerConv\obj\Debug\netcoreapp2.0\MileToKilometerConv.csprojAssemblyReference.cache
+E:\GreenFox\MrBB7\week1\day2\greenfox\MrBB7\week-1\day3\MileToKilometerConv\MileToKilometerConv\obj\Debug\netcoreapp2.0\MileToKilometerConv.csproj.CoreCompileInputs.cache
+E:\GreenFox\MrBB7\week1\day2\greenfox\MrBB7\week-1\day3\MileToKilometerConv\MileToKilometerConv\obj\Debug\netcoreapp2.0\MileToKilometerConv.AssemblyInfoInputs.cache
+E:\GreenFox\MrBB7\week1\day2\greenfox\MrBB7\week-1\day3\MileToKilometerConv\MileToKilometerConv\obj\Debug\netcoreapp2.0\MileToKilometerConv.AssemblyInfo.cs
+E:\GreenFox\MrBB7\week1\day2\greenfox\MrBB7\week-1\day3\MileToKilometerConv\MileToKilometerConv\obj\Debug\netcoreapp2.0\MileToKilometerConv.dll
+E:\GreenFox\MrBB7\week1\day2\greenfox\MrBB7\week-1\day3\MileToKilometerConv\MileToKilometerConv\obj\Debug\netcoreapp2.0\MileToKilometerConv.pdb
