@@ -6,13 +6,11 @@ namespace OddEven
     {
         static void Main(string[] args)
         {
-            int standard = 5;
-            int newNumber;
+            double standard;
 
-            Console.WriteLine(" the standard numebr: " +standard);
-            newNumber = Int32.Parse(Console.ReadLine());
+            standard = Double.Parse(Console.ReadLine()) % 2;
 
-            if (standard == newNumber)
+            if (standard == 0)
             {
                 Console.WriteLine("Even");
             }
