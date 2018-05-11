@@ -1,0 +1,11 @@
+C:\Users\user\source\repos\MileToKilometerConv\MileToKilometerConv\obj\Debug\netcoreapp2.0\MileToKilometerConv.csprojAssemblyReference.cache
+C:\Users\user\source\repos\MileToKilometerConv\MileToKilometerConv\obj\Debug\netcoreapp2.0\MileToKilometerConv.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\MileToKilometerConv\MileToKilometerConv\obj\Debug\netcoreapp2.0\MileToKilometerConv.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\MileToKilometerConv\MileToKilometerConv\obj\Debug\netcoreapp2.0\MileToKilometerConv.AssemblyInfo.cs
+C:\Users\user\source\repos\MileToKilometerConv\MileToKilometerConv\bin\Debug\netcoreapp2.0\MileToKilometerConv.deps.json
+C:\Users\user\source\repos\MileToKilometerConv\MileToKilometerConv\bin\Debug\netcoreapp2.0\MileToKilometerConv.runtimeconfig.json
+C:\Users\user\source\repos\MileToKilometerConv\MileToKilometerConv\bin\Debug\netcoreapp2.0\MileToKilometerConv.runtimeconfig.dev.json
+C:\Users\user\source\repos\MileToKilometerConv\MileToKilometerConv\bin\Debug\netcoreapp2.0\MileToKilometerConv.dll
+C:\Users\user\source\repos\MileToKilometerConv\MileToKilometerConv\bin\Debug\netcoreapp2.0\MileToKilometerConv.pdb
+C:\Users\user\source\repos\MileToKilometerConv\MileToKilometerConv\obj\Debug\netcoreapp2.0\MileToKilometerConv.dll
+C:\Users\user\source\repos\MileToKilometerConv\MileToKilometerConv\obj\Debug\netcoreapp2.0\MileToKilometerConv.pdb
