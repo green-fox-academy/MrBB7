@@ -1,0 +1,11 @@
+C:\Users\user\source\repos\HelloUser\HelloUser\obj\Debug\netcoreapp2.0\HelloUser.csprojAssemblyReference.cache
+C:\Users\user\source\repos\HelloUser\HelloUser\obj\Debug\netcoreapp2.0\HelloUser.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\HelloUser\HelloUser\obj\Debug\netcoreapp2.0\HelloUser.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\HelloUser\HelloUser\obj\Debug\netcoreapp2.0\HelloUser.AssemblyInfo.cs
+C:\Users\user\source\repos\HelloUser\HelloUser\bin\Debug\netcoreapp2.0\HelloUser.deps.json
+C:\Users\user\source\repos\HelloUser\HelloUser\bin\Debug\netcoreapp2.0\HelloUser.runtimeconfig.json
+C:\Users\user\source\repos\HelloUser\HelloUser\bin\Debug\netcoreapp2.0\HelloUser.runtimeconfig.dev.json
+C:\Users\user\source\repos\HelloUser\HelloUser\bin\Debug\netcoreapp2.0\HelloUser.dll
+C:\Users\user\source\repos\HelloUser\HelloUser\bin\Debug\netcoreapp2.0\HelloUser.pdb
+C:\Users\user\source\repos\HelloUser\HelloUser\obj\Debug\netcoreapp2.0\HelloUser.dll
+C:\Users\user\source\repos\HelloUser\HelloUser\obj\Debug\netcoreapp2.0\HelloUser.pdb
