@@ -10,6 +10,7 @@ namespace CopyFile
             string path = @"myfile.txt";
             string pathCopy = @"copied.txt";
             CopyFile(path, pathCopy);
+            Console.WriteLine(File.ReadAllText(path));
             Console.ReadLine();
             // Write a function that reads all lines of a file and writes the read lines to an other file (a.k.a copies the file)
             // It should take the filenames as parameters
@@ -19,19 +20,17 @@ namespace CopyFile
         {
             try
             {
-                string[] content = File.ReadAllLines(pathOrigi);
+                string content = File.ReadAllText(pathOrigi);
                 StreamWriter sw = new StreamWriter(pathNew);
-                foreach (char item in pathOrigi)
-                {
-                    sw.WriteLine(item);
-                }
+            
+                    sw.Write(content);
                 sw.Dispose();
                 return true;
             }
-            catch (Exception)
+            catch (Exception e)
             {
 
-                Console.WriteLine(" an error has ocurred");
+                Console.WriteLine(" an error has ocurred:, {0}" ,e.Message);
                 return false;
             }
         }
