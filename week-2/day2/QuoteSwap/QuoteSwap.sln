@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuoteSwap", "QuoteSwap\QuoteSwap.csproj", "{FF1DE0B4-4189-43B1-BA24-7EFEA6415CFC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF1DE0B4-4189-43B1-BA24-7EFEA6415CFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF1DE0B4-4189-43B1-BA24-7EFEA6415CFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF1DE0B4-4189-43B1-BA24-7EFEA6415CFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF1DE0B4-4189-43B1-BA24-7EFEA6415CFC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0656C8BB-60FB-4EAE-87F8-62F9124A3765}
+	EndGlobalSection
+EndGlobal
