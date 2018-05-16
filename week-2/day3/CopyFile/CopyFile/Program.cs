@@ -7,23 +7,33 @@ namespace CopyFile
     {
         static void Main(string[] args)
         {
-            string path = @"E:\GreenFox\MrBB7\week1\day2\greenfox\MrBB7\week-2\day3\CopyFile\myfile.txt";
-            WriteFile(path);
-            ReadFile(path);
+            string path = @"myfile.txt";
+            string pathCopy = @"copied.txt";
+            CopyFile(path, pathCopy);
             Console.ReadLine();
             // Write a function that reads all lines of a file and writes the read lines to an other file (a.k.a copies the file)
             // It should take the filenames as parameters
             // It should return a boolean that shows if the copy was successful
         }
-        public static string WriteFile(string path)
+        public static bool CopyFile(string pathOrigi, string pathNew)
         {
-            File.WriteAllText(path, "Bence Balazs");
-            return path;
-        }
-        public static string ReadFile(string path)
-        {
-            Console.WriteLine(File.ReadAllText(path));
-            return path;
+            try
+            {
+                string[] content = File.ReadAllLines(pathOrigi);
+                StreamWriter sw = new StreamWriter(pathNew);
+                foreach (char item in pathOrigi)
+                {
+                    sw.WriteLine(item);
+                }
+                sw.Dispose();
+                return true;
+            }
+            catch (Exception)
+            {
+
+                Console.WriteLine(" an error has ocurred");
+                return false;
+            }
         }
     }
 }

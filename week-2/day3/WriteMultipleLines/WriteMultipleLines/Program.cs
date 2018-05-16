@@ -11,6 +11,7 @@ namespace WriteMultipleLines
             string line = "mug";
             int numberOfLine = 5;
             MultipleLineWriter(anotherFile, line, numberOfLine);
+            Console.WriteLine(File.ReadAllText(anotherFile));
             Console.ReadLine();
             // Create a function that takes 3 parameters: a path, a word and a number,
             // than it should write to a file.
@@ -27,7 +28,7 @@ namespace WriteMultipleLines
             
             try
             {
-                StreamWriter sw = new StreamWriter(@"multplelines.txt");
+                StreamWriter sw = new StreamWriter(filePath);
 
                 for (int i = 0; i < inputNumb; i++)
                 {
