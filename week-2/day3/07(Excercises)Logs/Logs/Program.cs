@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace Logs
@@ -6,30 +7,50 @@ namespace Logs
     class Program
     {
         static void Main(string[] args)
-        {
-            string path = @"log.txt";
-            string[] arrayip = { };
-
-            GiveMeIP(path);
-            Console.WriteLine(File.ReadAllText(path));
-            Console.ReadLine();
-            // Read all data from 'log.txt'.
-            // Each line represents a log message from a web server
-            // Write a function that returns an array with the unique IP adresses.
-            // Write a function that returns the GET / POST request ratio.
-        }
-        public static string[] GiveMeIP(string[,] ipList, string ips)
-        {
-            try
             {
-                string[,] content = File.ReadAllText(ipList);
-                StreamWriter sw = new StreamWriter(ips);
+                string path = @"log.txt";
+                Console.WriteLine(Log(path));
+
+                foreach (var item in IpAddress(path))
+                {
+                    Console.WriteLine(item);
+                }
+                Console.ReadLine();
             }
-            catch (Exception)
+            public static string Log(string logGet)
             {
+                int getAmount = 0;
+                int postAmount = 0;
+                foreach (string line in File.ReadAllLines(logGet))
+                {
+                    if (line.Contains("GET"))
+                    {
+                        getAmount++;
+                    }
+                    else if (line.Contains("POST"))
+                    {
+                        postAmount++;
+                    }
+                }
 
-                throw;
+                return "The GET and POST ratio is : " + getAmount + "/" + postAmount;
+            }
+
+            public static List<string> IpAddress(string IpGet)
+            {
+                string[] content = File.ReadAllLines(IpGet);
+                List<string> listOfUniq = new List<string>();
+
+                for (int i = 0; i < content.Length; i++)
+                {
+                    content[i] = content[i].Substring(27, 11);
+
+                    if (!listOfUniq.Contains(content[i]))
+                    {
+                        listOfUniq.Add(content[i]);
+                    }
+                }
+                return listOfUniq;
             }
         }
     }
-}
