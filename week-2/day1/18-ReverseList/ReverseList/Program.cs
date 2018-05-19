@@ -6,16 +6,11 @@ namespace ReverseList
     {
         static void Main(string[] args)
         {
-            int[] arrayAj = { 3, 4, 5, 6, 7 };
-            int[] arraynewAj = new int[5];
+            int[] aj = { 3, 4, 5, 6, 7 };
 
-            int j = 0;
-
-            for (int i = arrayAj.Length - 1; i >= 0; i--)
+            for (int i = aj.Length - 1; i >= 0; i--)
             {
-                arraynewAj[j] = arrayAj[i];
-                j++;
-                Console.Write(arrayAj[i]+" ");
+                Console.Write(aj[i]+" ");
             }
             Console.ReadLine();
             // - Create an array variable named `aj`
