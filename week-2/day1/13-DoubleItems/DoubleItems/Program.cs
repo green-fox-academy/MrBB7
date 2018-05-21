@@ -6,11 +6,11 @@ namespace DoubleItems
     {
         static void Main(string[] args)
         {
-            int[] arraynumList = { 3, 4, 5, 6, 7 };
-            arraynumList = Array.ConvertAll(arraynumList, x => x * 2);
-            for (int i = 0; i < arraynumList.Length; i++)
+            int[] numbers = { 3, 4, 5, 6, 7 };
+            numbers = Array.ConvertAll(numbers, x => x * 2);
+            for (int i = 0; i < numbers.Length; i++)
             {
-                Console.Write(arraynumList[i] +" ");
+                Console.Write(numbers[i] +" ");
             }
             Console.ReadLine();
             // - Create an array variable named `numList`
