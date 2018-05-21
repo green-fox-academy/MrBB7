@@ -14,7 +14,7 @@ namespace SwapElements
 
             for (int i = 0; i < arrayAbc.Length; i++)
             {
-                Console.Write(arrayAbc[i]+" ");
+                Console.Write(arrayAbc[i] + " ");
             }
             Console.ReadLine();
             // - Create an array variable named `abc`
