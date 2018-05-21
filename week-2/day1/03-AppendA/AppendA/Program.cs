@@ -11,7 +11,7 @@ namespace AppendA
 
             for (int i = 0; i < arrayAnimals.Length; i++)
             {
-                Console.Write(arrayAnimals[i] + append + " "); 
+                Console.Write(arrayAnimals[i] + "a" + " "); 
             }
             Console.ReadLine();
             // - Create an array variable named `animals`
