@@ -12,7 +12,6 @@ namespace _02_NumberAdder
 
         private static int Summarizer(int number)
         {
-            int sum = 0;
             if (number == 0)
             {
                 return 0;
