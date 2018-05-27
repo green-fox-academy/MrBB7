@@ -6,8 +6,8 @@ namespace Third
     {
         static void Main(string[] args)
         {
-            int[] arrayq = { 4, 5, 6, 7 };
-            Console.WriteLine(arrayq[2]);
+            int[] q = { 4, 5, 6, 7 };
+            Console.WriteLine(q[2]);
             Console.ReadLine();
             // - Create an array variable named `q`
             //   with the following content: `[4, 5, 6, 7]`
