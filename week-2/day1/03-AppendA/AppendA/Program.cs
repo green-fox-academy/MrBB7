@@ -6,12 +6,11 @@ namespace AppendA
     {
         static void Main(string[] args)
         {
-            string[] arrayAnimals = { "kuty", "macsk", "cic" };
-            string append = "a";
+            string[] animals = { "kuty", "macsk", "cic" };
 
-            for (int i = 0; i < arrayAnimals.Length; i++)
+            for (int i = 0; i < animals.Length; i++)
             {
-                Console.Write(arrayAnimals[i] + "a" + " "); 
+                Console.Write(animals[i] + "a" + " "); 
             }
             Console.ReadLine();
             // - Create an array variable named `animals`
