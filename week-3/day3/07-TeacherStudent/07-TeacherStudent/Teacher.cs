@@ -13,6 +13,9 @@ namespace TeacherStudent
             this.answer = "the teacher is answering";
         }
 
-        public string Teach(Student student) => student.Learn();
+        public void Teach(Student student)
+        {
+            student.Learn();
+        }
     }
 }

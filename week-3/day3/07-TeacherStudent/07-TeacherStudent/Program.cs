@@ -7,22 +7,17 @@ namespace TeacherStudent
         static void Main(string[] args)
         {
             Teacher mathTeacher = new Teacher();
-            Student firstStudent = new Student();
+            Student poorStudent = new Student();
 
             Console.Write("The student is asking a question and the ");
-            firstStudent.Question(mathTeacher);
+            poorStudent.Question(mathTeacher);
 
             Console.WriteLine();
 
             Console.Write("The teacher is teaching and ");
-            mathTeacher.Teach(firstStudent);
+            mathTeacher.Teach(poorStudent);
             Console.ReadLine();
-            /*            Student
-             learn()
-             question(teacher)->calls the teachers answer method
-             Teacher
-             teach(student)->calls the students learn method
-             answer()*/
         }
     }
 }
+
