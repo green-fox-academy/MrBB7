@@ -6,9 +6,9 @@ namespace Animal
 {
     class Animal
     {
-        public int levelOfHunger = 50;
-        public int levelOfThirst = 50;
-        public int[] thistAndHunger = { 50, 50 };
+        public static int levelOfHunger = 50;
+        public static int levelOfThirst = 50;
+        public int[] thirstAndHunger = { levelOfThirst, levelOfHunger };
 
 
         public int Eat()
@@ -26,11 +26,11 @@ namespace Animal
         public int[] Play()
         {
             int play = Int32.Parse(Console.ReadLine());
-            for (int i = 0; i < thistAndHunger.Length; i++)
+            for (int i = 0; i < thirstAndHunger.Length; i++)
             {
-                thistAndHunger[i] += play;
+                thirstAndHunger[i] += play;
             }
-            return thistAndHunger;
+            return thirstAndHunger;
         }
     }
 }
