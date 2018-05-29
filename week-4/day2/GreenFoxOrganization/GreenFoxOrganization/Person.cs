@@ -17,6 +17,30 @@ namespace GreenFoxOrganization
             this.gender = gender;
         }
 
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+        }
+
+        public int Age
+        {
+            get
+            {
+                return age;
+            }
+        }
+
+        public string Gender
+        {
+            get
+            {
+                return gender;
+            }
+        }
+
         public Person()
         {
             this.name = "Jane Doe";
@@ -24,12 +48,12 @@ namespace GreenFoxOrganization
             this.gender = "female";
         }
 
-        public string Introduce()
+        public virtual string Introduce()
         {
             return string.Format("Hi, I'm {0}, a {1} year old {2}", name, age, gender);
         }
 
-        public string GetGoal()
+        public virtual string GetGoal()
         {
             return string.Format("My goal is: Live for the moment");
         }
