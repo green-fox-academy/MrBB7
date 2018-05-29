@@ -17,14 +17,10 @@ namespace Counter
             sum += number;
             return sum;
         }
-        public void Add()
-        {
-            sum++;
-        }
+
         public string Get()
         {
-            string currentSum = sum.ToString();
-            return currentSum;
+            return sum.ToString();
         }
         public void Reset()
         {
@@ -32,3 +28,4 @@ namespace Counter
         }
     }
 }
+
