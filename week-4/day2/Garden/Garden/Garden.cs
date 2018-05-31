@@ -16,6 +16,7 @@ namespace Garden
             plantsInTheGarden.Add(plant4);
         }
 
+
         public string StateOfTheGarden()
         {
             string output = "";
@@ -33,7 +34,7 @@ namespace Garden
 
         public void Watering(int waterAmount)
         {
-            double waterAmountForEachPlant = waterAmount / 4;
+            double waterAmountForEachPlant = waterAmount / plantsInTheGarden.Count;
 
             for (int i = 0; i < plantsInTheGarden.Count; i++)
             {
@@ -42,3 +43,4 @@ namespace Garden
         }
     }
 }
+
