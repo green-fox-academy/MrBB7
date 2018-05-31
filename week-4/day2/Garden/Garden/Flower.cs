@@ -4,28 +4,28 @@ using System.Text;
 
 namespace Garden
 {
-    class Tree : Plant
+    class Flower : Plant
     {
-        public Tree(string plantColor) : base(plantColor)
+        public Flower(string plantColor) : base(plantColor)
         {
 
         }
 
         public override string NeedForWater()
         {
-            if (CurrentWaterLevel < 10)
+            if (CurrentWaterLevel < 5)
             {
-                return String.Format("This {0} tree needs water", GetColor);
+                return String.Format("This {0} flower needs water", GetColor);
             }
             else
             {
-                return String.Format("This {0} tree doesn't need water", GetColor);
+                return String.Format("This {0} flower doesn't need water", GetColor);
             }
         }
 
         public override double WaterAbsorb(double getWater)
         {
-            double waterAbsorb = getWater * 0.4;
+            double waterAbsorb = getWater * 0.75;
             return waterAbsorb;
         }
     }

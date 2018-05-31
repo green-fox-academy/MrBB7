@@ -7,18 +7,29 @@ namespace Garden
     class Plant
     {
         private string plantColor;
-        private int needForWater;
-        private double waterAbsorb;
+        private double currentWater;
 
 
-        public Plant( string plantColor, int needForWater, double waterAbsorb)
+        public Plant( string plantColor)
         {
             this.plantColor = plantColor;
-            this.needForWater = needForWater;
-            this.waterAbsorb = waterAbsorb;
+            this.currentWater = 0;
         }
 
-        public string PantColor
+        public double CurrentWaterLevel
+        {
+            get
+            {
+                return currentWater;
+            }
+        }
+
+        public void SetCurrentWater(double change)
+        {
+            currentWater += change;
+        }
+
+        public string GetColor
         {
             get
             {
@@ -26,20 +37,15 @@ namespace Garden
             }
         }
 
-        public int NeedForWater
+        public virtual string NeedForWater()
         {
-            get
-            {
-                return needForWater;
-            }
+            return "";
         }
 
-        public double WaterAbsorb
+        public virtual double WaterAbsorb(double getWater)
         {
-            get
-            {
-                return waterAbsorb;
-            }
+            double waterAbsorb = 0.0;
+            return waterAbsorb;
         }
     }
 }
