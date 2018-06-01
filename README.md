@@ -7,3 +7,7 @@ depo of Bence Balazs Fulvipes Ocelot
 
 [Webpage with first day html task] 
 (https://github.com/MrBB7/MrBB7.github.io.git)
+
+[Trial Exam](https://github.com/MrBB7/exam-trial-basics)
+
+[ToDo App](https://github.com/MrBB7/todo-app)
