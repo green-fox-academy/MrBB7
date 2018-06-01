@@ -6,7 +6,7 @@ namespace Garden
 {
     class Garden
     {
-        private List<Plant> plantsInTheGarden = new List<Plant>();
+        public List<Plant> plantsInTheGarden = new List<Plant>();
 
         public void AddPlants(Plant plant1, Plant plant2, Plant plant3, Plant plant4)
         {
