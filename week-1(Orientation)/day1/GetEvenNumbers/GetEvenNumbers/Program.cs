@@ -20,9 +20,9 @@ namespace GetEvenNumbers
                 Console.WriteLine(item);
             }
 
-            IEnumerable<int> MethodOddNumbers = numbers.Where(number => number % 2 == 0).OrderBy(n => n);
+            IEnumerable<int> methodOddNumbers = numbers.Where(number => number % 2 == 0).OrderBy(n => n);
 
-            foreach (int item in MethodOddNumbers)
+            foreach (int item in methodOddNumbers)
             {
                 Console.Write(item + " ");
             }

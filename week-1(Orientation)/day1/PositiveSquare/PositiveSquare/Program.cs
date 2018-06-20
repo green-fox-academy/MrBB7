@@ -21,9 +21,9 @@ namespace PositiveSquare
                 Console.WriteLine(item);
             }
 
-            IEnumerable<int> MethodSynSquar = numbers.Where(number => number > 0).Select(number => number * number);
+            IEnumerable<int> methodSynSquar = numbers.Where(number => number > 0).Select(number => number * number);
 
-            foreach (int item in MethodSynSquar)
+            foreach (int item in methodSynSquar)
             {
                 Console.Write(item + " ");
             }
