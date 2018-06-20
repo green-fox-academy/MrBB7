@@ -21,9 +21,9 @@ namespace MoreThanTwenty
                 Console.WriteLine(item);
             }
 
-            IEnumerable<int> MethodSyntMoreThenTwenty = numbers.Select(number => number * number).Where(number => number > 20);
+            IEnumerable<int> methodSyntMoreThenTwenty = numbers.Select(number => number * number).Where(number => number > 20);
 
-            foreach (var item in MethodSyntMoreThenTwenty)
+            foreach (var item in methodSyntMoreThenTwenty)
             {
                 Console.Write(item + " ");
             }
