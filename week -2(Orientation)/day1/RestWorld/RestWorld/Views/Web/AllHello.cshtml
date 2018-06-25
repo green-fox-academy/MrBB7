@@ -1,0 +1,16 @@
+﻿@model RestWorld.Models.EveryHello
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <div>
+        @foreach (var hello in Model.hellos)
+        {
+        <p style="color: rgb("color: Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256))">@hello</p>
+        }
+    </div>
+    </body>
+</html>
