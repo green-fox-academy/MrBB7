@@ -46,6 +46,9 @@ namespace ToDo
                 var listOfElements = command.ExecuteReader().GetEnumerator();
                 do
                 {
+                    var asd = listOfElements.Current.GetType();
+                    int a;
+                    a = 10;
                     newItems.Add(GenerateTodo((SQLiteDataReader)listOfElements.Current));
                 }
                 while (listOfElements.MoveNext());

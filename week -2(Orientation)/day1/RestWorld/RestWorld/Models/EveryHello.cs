@@ -10,11 +10,11 @@ namespace RestWorld.Models
     {
         public string Name { get; set; }
         public string[] hellos { get; set; }
-        public static readonly Random rand = new Random();
+        public static Random rand = new Random();
 
         public Color GetRandomColour()
         {
-            return Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256));
+            return Color.FromArgb(rand.Next(0,256));
         }
 
         public EveryHello()

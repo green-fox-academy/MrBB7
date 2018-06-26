@@ -17,5 +17,10 @@ namespace ToDo
         {
             throw new NotImplementedException();
         }
+
+        internal SQLiteDataReader ExecuteReader()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

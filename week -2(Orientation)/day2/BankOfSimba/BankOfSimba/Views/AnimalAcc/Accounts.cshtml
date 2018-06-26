@@ -1,0 +1,81 @@
+﻿@model AccountsInTheBank
+
+<style>
+
+    body {
+        color: darkgray;
+        font-family: Verdana;
+        font-size: 10px;
+    }
+
+    table {
+        border-spacing: 0.5rem;
+        font-family: Calibri;
+        border-collapse: collapse;
+        border-radius: 2px;
+    }
+
+    th {
+        background: #0f0f0f;
+        color: #9f9f9f;
+        padding: 2rem;
+        text-align: left;
+        font-size: 32px;
+        border-bottom: 5px solid gray;
+    }
+
+    #month {
+        width: 400px;
+        border-right: 1px solid gray;
+    }
+
+    #sales {
+        width: 500px;
+    }
+
+    td {
+        font-family: Cambria;
+        color: gray;
+        font-size: 26px;
+        border: 1px solid #999;
+        padding: 2rem;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #fff;
+    }
+
+    tr:nth-child(even) {
+        background-color: #eee;
+    }
+</style>
+
+<table style="width:50%">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Balance</th>
+        <th>Animal type</th>
+    </tr>
+    @foreach (BankAccount item in Model.bankAccounts)
+    {
+        if (item.IsKing == true)
+        {
+            <tr>
+                <td bgcolor='gold'><font color="hotpink">@item.Id</font></td>
+                <td bgcolor='gold'><font color="hotpink">@item.Name</font></td>
+                <td bgcolor='gold'><font color="hotpink">@item.Balance</font></td>
+                <td bgcolor='gold'><font color="hotpink">@item.Animal</font></td>
+            </tr> }
+        else
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Balance</td>
+                <td>@item.Animal</td>
+            </tr>
+        }
+    }
+</table>
+

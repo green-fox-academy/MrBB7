@@ -10,5 +10,10 @@ namespace ToDo
         {
             this.v = v;
         }
+
+        internal void Open()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
