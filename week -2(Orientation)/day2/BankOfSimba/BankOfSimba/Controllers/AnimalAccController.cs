@@ -20,7 +20,7 @@ namespace BankOfSimba.Controllers
             {
                 Name = "Simba",
                 Balance = 2000,
-                Animal = "Lion"
+                AnimalType = "Lion"
 
             };
             return View(bankAccount);
@@ -32,5 +32,24 @@ namespace BankOfSimba.Controllers
 
             return View(accountsInTheBank);
         }
+
+        [HttpPost]
+        [Route("changinbalance")]
+        public IActionResult ChangingBalance(string type)
+        {
+            accountsInTheBank.AccountsInTheBank(type);
+
+            return RedirectToAction("Accounts");
+        }
+
+        [HttpPost]
+        [Route("AddNewAccount")]
+        public IActionResult AddNewAccount(BankAccount account)
+        {
+            accountsInTheBank.AccountsInTheBank.Add(account);
+
+            return RedirectToAction("Accounts");
+        }
     }
+}
 }
