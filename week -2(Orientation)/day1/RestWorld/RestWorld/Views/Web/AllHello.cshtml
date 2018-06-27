@@ -9,8 +9,8 @@
     <div>
         @foreach (var hello in Model.hellos)
         {
-        <p>@hello</p>
-        }
-    </div>
-    </body>
+        <p style="color:rgb(@Model.GetRGB(),@Model.GetRGB(),@Model.GetRGB());">@hello</p>
+            }
+        </div>
+</body>
 </html>

@@ -24,5 +24,19 @@ namespace RestWorld.Models
                 "Salve", "Ciao", "Kon-nichiwa", "An-nyong Ha-se-yo", "Salvëte", "Ni hao", "Dzien' dobry", "Olá", "Bunã ziua", "Zdravstvuyte", "Hola", "Jambo", "Hujambo", "Hej",
                 "Sa-wat-dee", "Merhaba", "Selam", "Vitayu", "Xin chào", "Hylo", "Sut Mae", "Sholem Aleychem", "Sawubona"};
         }
+
+        public int GetFont()
+        {
+            Random rndFont = new Random();
+
+            return rndFont.Next(10, 27);
+        }
+
+        public int GetRGB()
+        {
+            Random rndRGB = new Random();
+
+            return rndRGB.Next(0, 256);
+        }
     }
 }
