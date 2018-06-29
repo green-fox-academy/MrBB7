@@ -1,0 +1,36 @@
+﻿@model FoxClub.Services.FoxServices
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<style>
+
+    body {
+        background-image: url("https://stopandnowwhat.files.wordpress.com/2014/02/mg_3889-copy.jpg?w=620");
+        background-size: 95%;
+        color: white;
+    }
+</style>
+
+<body>
+    <p href=""><font size="10">Basic information</font></p>
+    <img src="~/images/Malloy.jpg">
+    <p><font size="10">This is Mr @Model.GetName(), He Eats @Model.GetFood(), Drinks @Model.GetDrink() and knows @Model.GetTricks().Count() tricks</font></p>
+
+    <h1>Known Tricks: </h1>
+
+    @if (Model.GetTricks() == null || Model.GetTricks().Count() == 0)
+    {
+        <p>Dunno Don'care</p>
+    }
+    else
+    {
+        foreach (string trick in Model.GetTricks())
+        {
+            <p>@trick</p>
+
+        }
+    }
+</body>
