@@ -7,16 +7,16 @@ namespace GreetSomeOne.Services
 {
     public class GreetingService : IGreet
     {
-        private string name;
+        public string Name { get; set; }
 
         public void SetName(string inputName)
         {
-            name = inputName;
+            Name = inputName;
         }
 
         public string GetName()
         {
-            return name;
+            return Name;
         }
     }
 }
