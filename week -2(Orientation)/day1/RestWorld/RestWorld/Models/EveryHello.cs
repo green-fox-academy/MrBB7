@@ -25,14 +25,14 @@ namespace RestWorld.Models
                 "Sa-wat-dee", "Merhaba", "Selam", "Vitayu", "Xin chào", "Hylo", "Sut Mae", "Sholem Aleychem", "Sawubona"};
         }
 
-        public int GetFont()
+        public int GetFontSize()
         {
             Random rndFont = new Random();
 
             return rndFont.Next(10, 27);
         }
 
-        public int GetRGB()
+        public int GetRandomRGBValue()
         {
             Random rndRGB = new Random();
 
