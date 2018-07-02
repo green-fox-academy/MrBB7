@@ -29,14 +29,14 @@ namespace Anagramm.Controllers
         public IActionResult AnagramChecker(string inputWord)
         {
             anagram.AnagramChecker(inputWord);
-            return RedirectToAction("result");
+            return RedirectToAction("Result");
         }
 
         [HttpGet]
         [Route("anagram")]
         public IActionResult Result()
         {
-            return View("result", anagram.IsAnagram());
+            return View("Result", anagram.IsAnagram());
         }
     }
 }

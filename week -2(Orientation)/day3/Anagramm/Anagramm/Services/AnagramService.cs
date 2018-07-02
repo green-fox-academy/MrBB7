@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Anagramm.Services
 {
-    public class AnagramServices : IAnagram
+    public class AnagramService : IAnagram
     {
         private bool isAnagram;
         private string anagram;
