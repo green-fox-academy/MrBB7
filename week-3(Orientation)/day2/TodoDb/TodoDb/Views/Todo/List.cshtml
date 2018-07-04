@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "List";
+}
+@model List<Todo>
+<h2>Todos for today</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Action</th>
+        <th scope="col">Done</th>
+        <th scope="col">Urgent</th>
+
+    </tr>
+    @foreach (var todo in @Model)
+    {
+        <tr class="text-left">
+            <th scope="row">@todo.Id</th>
+            <td>@todo.Title</td>
+            <td>@todo.IsDone</td>
+            <td>@todo.IsUrgent</td>
+            <td>
+                <form action="/Delete?id=@todo.Id" method="post">
+                    <input class="btn btn-primary" type="submit" value="Delete this gUy"/>
+                </form>
+            </td>
+        </tr>
+    }
+</table>
+
+<h1>Come at me todos!</h1>
+<form action="/AddTodo" method="post">
+    <p>Create new Todo:</p>
+    <input type="text" name="title" />
+    <input class="btn btn-primary" type="submit" value="List" />
+</form>
+
+
+
+
