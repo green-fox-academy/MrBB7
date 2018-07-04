@@ -26,9 +26,13 @@ namespace TodoDb.Repositories
             todoDbContext.SaveChanges();
         }
 
-        public void Update()
+        public void SetTitle(int id, string newTitle)
         {
             throw new NotImplementedException();
+            /*
+            Todo todo = todoDbContext.Todos.FirstOrDefault(x => x.Id == id);
+            todoDbContext.Todos.Title = newTitle;
+            todoDbContext.SaveChanges();*/
         }
 
         public void Delete(int id)
@@ -38,7 +42,14 @@ namespace TodoDb.Repositories
             todoDbContext.SaveChanges();
         }
 
-        public List<Todo> Search(string word)
+        public List<Todo> Filter(string filterWord)
+        {
+            List<Todo> filteredTodo = todoDbContext.Todos.Where(x => x.Title.ToLower().Contains(filterWord.ToLower())).ToList();
+            todoDbContext.SaveChanges();
+            return filteredTodo;
+        }
+
+        public void SetTitle()
         {
             throw new NotImplementedException();
         }

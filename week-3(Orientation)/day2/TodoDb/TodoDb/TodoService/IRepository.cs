@@ -10,8 +10,8 @@ namespace TodoDb.TodoService
     {
         void AddTodo(Todo todo);
         List<Todo> GetAllTodos();
-        void Update();
+        void SetTitle();
         void Delete(int id);
-        List<Todo> Search(string word);
+        List<Todo> Filter(string filterWord);
     }
 }

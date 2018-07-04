@@ -22,7 +22,12 @@
             <td>@todo.IsUrgent</td>
             <td>
                 <form action="/Delete?id=@todo.Id" method="post">
-                    <input class="btn btn-primary" type="submit" value="Delete this gUy"/>
+                    <input class="btn btn-primary" type="submit" value="Delete this gUy" />
+                </form>
+                </td>
+                <td>
+                <form action="/Edit?id=@todo.Title" method="post">
+                    <input class="btn btn-primary" type="submit" value="yo dog ima change dat" />
                 </form>
             </td>
         </tr>

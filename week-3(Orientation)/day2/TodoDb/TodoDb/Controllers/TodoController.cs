@@ -38,5 +38,11 @@ namespace TodoDb.Controllers
             repository.Delete(id);
             return View("List", repository.GetAllTodos());
         }
+
+        [HttpGet("filter")]
+        public IActionResult List([FromQuery]string filterWord)
+        {
+            return View("List", repository.Filter(filterWord).ToList());
+        }
     }
 }
