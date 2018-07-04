@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using TodoDb.Models;
@@ -26,13 +28,10 @@ namespace TodoDb.Repositories
             todoDbContext.SaveChanges();
         }
 
-        public void SetTitle(int id, string newTitle)
+        public void EditTodo(Todo editedTodo)
         {
-            throw new NotImplementedException();
-            /*
-            Todo todo = todoDbContext.Todos.FirstOrDefault(x => x.Id == id);
-            todoDbContext.Todos.Title = newTitle;
-            todoDbContext.SaveChanges();*/
+            todoDbContext.Update(editedTodo);
+            todoDbContext.SaveChanges();
         }
 
         public void Delete(int id)
@@ -42,16 +41,16 @@ namespace TodoDb.Repositories
             todoDbContext.SaveChanges();
         }
 
+        public Todo GetTodo(long id)
+        {
+            return todoDbContext.Todos.Where(t => t.Id == id).SingleOrDefault();
+        }
+
         public List<Todo> Filter(string filterWord)
         {
             List<Todo> filteredTodo = todoDbContext.Todos.Where(x => x.Title.ToLower().Contains(filterWord.ToLower())).ToList();
             todoDbContext.SaveChanges();
             return filteredTodo;
-        }
-
-        public void SetTitle()
-        {
-            throw new NotImplementedException();
         }
     }
 }

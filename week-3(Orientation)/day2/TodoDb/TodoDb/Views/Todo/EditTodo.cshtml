@@ -1,0 +1,15 @@
+﻿@model Todo
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit todo</h2>
+
+<form action="/@Model.Id/editTodo" method="post">
+    <input type="hidden" name="id" value="@Model.Id" />
+    <div>Todo description: <input type"text" name="Title" value="@Model.Title" /></div>
+    <div>Urgent: <input type="checkbox" name="IsUrgent" checked="@Model.IsUrgent" value="true" /></div>
+    <div>Done: <input type="checkbox" name="IsDone" checked="@Model.IsDone" value="true" /></div>
+    <div><button type="submit">Submit</button><a href="/">Cancel</a></div>
+</form>
