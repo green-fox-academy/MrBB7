@@ -26,6 +26,7 @@ namespace TodoDb
         {
             string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=todo;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             services.AddDbContext<TodoDbContext>(options => options.UseSqlServer(connectionString));
+            services.AddTransient<TodoDbContext>();
             services.AddTransient<IRepository, TodoRepository>();
             services.AddMvc();
         }

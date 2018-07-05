@@ -11,7 +11,7 @@ namespace TodoDb.TodoService
         void AddTodo(Todo todo);
         List<Todo> GetAllTodos();
         void EditTodo(Todo editedTodo);
-        Todo GetTodo(long id);
+        Todo GetTodo(int id);
         void Delete(int id);
         List<Todo> Filter(string filterWord);
     }

@@ -40,22 +40,23 @@ namespace TodoDb.Controllers
         }
 
         [HttpGet("filter")]
-        public IActionResult List([FromQuery]string filterWord)
+        public IActionResult Filter([FromQuery]string filterWord)
         {
             return View("List", repository.Filter(filterWord).ToList());
         }
 
-        [HttpGet("edittodo")]
-        public ActionResult EditTodo(long id)
+        [HttpPost("edittodo")]
+        public IActionResult GetEditTodo(int id)
         { 
             return View("EditTodo", repository.GetTodo(id));
         }
 
-        [HttpPost("edittodo")]
-        public ActionResult EditTodo(Todo editedTodo)
+        [HttpPost("editedtodo")]
+        public IActionResult EditTodo(Todo editedTodo)
         {
             repository.EditTodo(editedTodo);
-            return View("List", repository.GetAllTodos());
+            return RedirectToAction("List");
         }
+
     }
 }

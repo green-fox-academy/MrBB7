@@ -28,12 +28,6 @@ namespace TodoDb.Repositories
             todoDbContext.SaveChanges();
         }
 
-        public void EditTodo(Todo editedTodo)
-        {
-            todoDbContext.Update(editedTodo);
-            todoDbContext.SaveChanges();
-        }
-
         public void Delete(int id)
         {
             Todo todo = todoDbContext.Todos.FirstOrDefault(x => x.Id == id);
@@ -41,9 +35,15 @@ namespace TodoDb.Repositories
             todoDbContext.SaveChanges();
         }
 
-        public Todo GetTodo(long id)
+        public Todo GetTodo(int id)
         {
-            return todoDbContext.Todos.Where(t => t.Id == id).SingleOrDefault();
+            return todoDbContext.Todos.FirstOrDefault(x => x.Id == id);
+        }
+
+        public void EditTodo(Todo editedTodo)
+        {
+            todoDbContext.Update(editedTodo);
+            todoDbContext.SaveChanges();
         }
 
         public List<Todo> Filter(string filterWord)
