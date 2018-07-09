@@ -21,7 +21,7 @@ namespace Frontend.Controllers
             {
                 return new JsonResult(new
                 {
-                    error = "Plez provide an input "
+                    error = "Please provide an input "
                 });
             }
             else
@@ -30,6 +30,25 @@ namespace Frontend.Controllers
                 {
                     received = input,
                     result = input * 2
+                });
+            }
+        }
+
+        [HttpGet("/greeter")]
+        public IActionResult Greeter([FromQuery] string name)
+        {
+            if (name == null)
+            {
+                return new JsonResult(new
+                {
+                    error = "Please provide a name!"
+                });
+            }
+            else
+            {
+                return new JsonResult(new
+                {
+                    welcome_message = $"Oh, hi there {name}, my dear student!"
                 });
             }
         }
