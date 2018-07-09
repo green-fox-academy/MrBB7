@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Frontend.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Frontend.Controllers
@@ -66,6 +67,39 @@ namespace Frontend.Controllers
         public IActionResult AppendA()
         {
             return StatusCode(404);
-        }              
+        }
+
+        [HttpPost("/dountil/{what}")]
+        public IActionResult DoUntil(string what, [FromBody]DoUntil doUntil)
+        {
+            if (doUntil.Until == null)
+            {
+                return new JsonResult(new
+                {
+                    error = "Please provide a number!"
+                });
+            }
+            else
+            {
+                if (what == "sum")
+                {
+                    return new JsonResult(new
+                    {
+                        result = doUntil.Sum()
+                    });
+                }
+                else if (what == "factor")
+                {
+                    return new JsonResult(new
+                    {
+                        result = doUntil.Factorial()
+                    });
+                }
+            }
+            return new JsonResult(new
+            {
+                error = "Please provide a number!"
+            });
+        }
     }
 }
