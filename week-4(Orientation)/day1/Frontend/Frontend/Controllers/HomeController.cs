@@ -13,5 +13,25 @@ namespace Frontend.Controllers
         {
             return File("index.html", "text/html");
         }
+
+        [HttpGet("/doubling")]
+        public IActionResult Doubling([FromQuery]int? input)
+        {
+            if (input == null)
+            {
+                return new JsonResult(new
+                {
+                    error = "Plez provide an input "
+                });
+            }
+            else
+            {
+                return new JsonResult(new
+                {
+                    received = input,
+                    result = input * 2
+                });
+            }
+        }
     }
 }
