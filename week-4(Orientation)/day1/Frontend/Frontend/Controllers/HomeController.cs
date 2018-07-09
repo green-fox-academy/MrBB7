@@ -52,5 +52,20 @@ namespace Frontend.Controllers
                 });
             }
         }
+
+        [HttpGet("/appenda/{appendable}")]
+        public IActionResult AppendA(string appendable)
+        {
+            return new JsonResult(new
+            {
+                appendedContent = appendable + "a"
+            });
+        }
+
+        [HttpGet("/appenda")]
+        public IActionResult AppendA()
+        {
+            return StatusCode(404);
+        }              
     }
 }
