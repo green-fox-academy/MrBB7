@@ -1,0 +1,25 @@
+﻿@model FoxClub.Services.FoxServices
+@{
+    ViewData["Title"] = "NutritionStore";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+body { background-image: url('https://thumbs.gfycat.com/DetailedZestyChrysomelid-size_restricted.gif'); background-size: cover; 
+       
+}
+
+
+</style>
+
+<audio controls>
+    <source src="~/nutrisound.wav" type="audio/mpeg" autostart="true">
+</audio>
+
+<h2><font color="white" size="10">Wanna buy some magic?</font></h2>
+<form action="/Fox/NutritionStore" method="post">
+    <input type="text" name="drink" value="" placeholder="to drink" required />
+    <input type="text" name="food" value="" placeholder="to eat" required />
+    <button type="submit">Submit</button>
+</form>
+

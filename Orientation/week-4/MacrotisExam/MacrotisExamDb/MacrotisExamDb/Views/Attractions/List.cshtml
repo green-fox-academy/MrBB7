@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewData["Title"] = "List";
+}
+@model List<Attractions>
+<h2>Todos for today</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">AttrName</th>
+        <th scope="col">City</th>
+        <th scope="col">Category</th>
+        <th scope="col">Price</th>
+        <th scope="col">Longitude</th>
+        <th scope="col">Lattitude</th>
+        <th scope="col">RecommendedAge</th>
+        <th scope="col">Duration</th>
+
+    </tr>
+    @foreach (var attraction in @Model)
+    {
+        <tr class="text-left">
+            <th scope="row">@attraction.Id</th>
+            <td>@attraction.AttrName</td>
+            <td>@attraction.City</td>
+            <td>@attraction.Category</td>
+            <td>@attraction.Price</td>
+            <td>@attraction.Longitude</td>
+            <td>@attraction.Lattitude</td>
+            <td>@attraction.RecommendedAge</td>
+            <td>@attraction.Duration</td>
+        </tr>
+    }
+</table>
+    <form action="/add" method="post" name="attract">
+        <label>Name: </label><input type="text" name="AttrName" value="" required /><br />
+        <label>City: </label><input type="text" name="City" value="" required /><br />
+        <label>Price: </label><input type="text" name="Price" value="" required /><br />
+        <label>Longitude: </label><input type="text" name="Longitude" value="" required /><br />
+        <label>Lattitude: </label><input type="text" name="Lattitude" value="" required /><br />
+        <label>Category: </label><input type="text" name="Category" value="" required /><br />
+        <label>Duration: </label><input type="text" name="Duration" value="" required /><br />
+        <label>Recommended Age:</label><input type="text" name="RecommendedAge" value="" required /><br />
+        <button type="submit">Submit</button><br />
+    </form>
+    
+
+
+
+
+
