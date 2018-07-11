@@ -12,5 +12,8 @@ namespace RedditBackend.Models
         public string Url { get; set; }
         public int DateCurrent { get; set; }
         public int Score { get; set; }
+
+        public User User { get; set; }
+        public int? Vote { get; set; }
     }
 }

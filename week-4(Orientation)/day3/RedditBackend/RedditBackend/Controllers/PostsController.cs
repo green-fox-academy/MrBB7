@@ -30,28 +30,28 @@ namespace RedditBackend.Controllers
             return RedirectToAction("List");
         }
 
-        [HttpPut("/posts/<id>/upvote")]
+        [HttpPut("/posts/{id}/upvote")]
         public IActionResult UpVote(int id)
         {
             postsDatabase.UpVote(id);
             return RedirectToAction("List");
         }
 
-        [HttpPut("/posts/<id>/downvote")]
+        [HttpPut("/posts/{id}/downvote")]
         public IActionResult DownVote(int id)
         {
             postsDatabase.DownVote(id);
             return RedirectToAction("List");
         }
 
-        [HttpDelete("/posts/<id>")]
+        [HttpDelete("/posts/{id}")]
         public IActionResult Delete(int id)
         {
             postsDatabase.DeleteAPost(id);
             return RedirectToAction("List");
         }
 
-        [HttpPut("/posts/<id>")]
+        [HttpPut("/posts/{id}")]
         public IActionResult Put(Post post, int id)
         {
             postsDatabase.UpdatePost(post, id);
