@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using RedditBackend.Entities;
+using RedditBackend.Repositories;
+using RedditBackend.Services;
 
 namespace RedditBackend
 {
@@ -26,6 +28,9 @@ namespace RedditBackend
             services.AddMvc();
             services.AddDbContext<RedditBackendDbContext>(options =>
        options.UseSqlServer(Configuration.GetConnectionString("RedditBackend")));
+            services.AddTransient<RedditBackendDbContext>();
+            services.AddTransient<PostRepository>();
+            services.AddTransient<IService, PostService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

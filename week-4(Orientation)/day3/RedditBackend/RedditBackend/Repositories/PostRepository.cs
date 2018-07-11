@@ -35,7 +35,7 @@ namespace RedditBackend.Repositories
 
         public void Update(Post post)
         {
-            postDb.Posts.Update(post);
+            postDb.Update(post);
             postDb.SaveChanges();
         }
     }

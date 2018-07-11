@@ -11,8 +11,8 @@ using System;
 namespace RedditBackend.Migrations
 {
     [DbContext(typeof(RedditBackendDbContext))]
-    [Migration("20180711084811_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20180711134047_initialcreate")]
+    partial class initialcreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,42 +26,17 @@ namespace RedditBackend.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int>("Score");
+                    b.Property<int>("DateCurrent");
 
-                    b.Property<DateTime>("TimeStamp");
+                    b.Property<int>("Score");
 
                     b.Property<string>("Title");
 
                     b.Property<string>("Url");
 
-                    b.Property<int?>("UserId");
-
-                    b.Property<int?>("Vote");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Posts");
-                });
-
-            modelBuilder.Entity("RedditBackend.Models.User", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Name");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("User");
-                });
-
-            modelBuilder.Entity("RedditBackend.Models.Post", b =>
-                {
-                    b.HasOne("RedditBackend.Models.User", "User")
-                        .WithMany("Posts")
-                        .HasForeignKey("UserId");
                 });
 #pragma warning restore 612, 618
         }

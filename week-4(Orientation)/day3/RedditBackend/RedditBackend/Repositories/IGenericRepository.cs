@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 
 namespace RedditBackend.Repositories
 {
-    public interface ICRUDRepository<Type>
+    public interface IGenericRepository<Type>
     {
-        Type Create(Type post);
+        void Create(Type post);
         List<Type> Read();
-        Type Update(int id);
-        Type Delete(int id);
+        void Update(Type post);
+        void Delete(Type post);
     }
 }
