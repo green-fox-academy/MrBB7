@@ -1,0 +1,41 @@
+﻿@model CorsacOrientationExam.ViewModels.SpaceEntityDTO
+@{
+    ViewData["Title"] = "SpaceTable";
+}
+
+<h2>SpaceTransporter</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Planet</th>
+            <th>Population</th>
+            <th>Spaceship location</th>
+            <th>People aboard</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Planet current in Model.Planets)
+        {
+            if (current.Name.Equals(Model.Spaceship.Planet))
+            {
+                <tr>
+                    <td>@current.Name</td>
+                    <td>@current.Population</td>
+                    <td><a href="/toplanet/@current.Id">to planet</a> <a href="/toship/@current.Id">To ship</a></td>
+                    <td>@Model.Spaceship.Utilization</td>
+                </tr>
+            }
+            else
+            {
+                <tr>
+                    <td>@current.Name</td>
+                    <td>@current.Population</td>
+                    <form action="/movehere/@current.Id" method="post">
+                        <button type="submit"> Move here</button>
+                    </form>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
