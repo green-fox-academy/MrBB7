@@ -1,0 +1,83 @@
+body {
+	background-color: #C0C0C0;
+	font-family: Arial;
+}
+
+	body form {
+		text-align: center;
+	}
+
+.mainContent {
+	margin: 10px auto 0;
+	width: 50%;
+	padding: 50px 30px;
+	background-color: #ffffff;
+	color: #C0C0C0;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	display: inline-block;
+	-moz-box-shadow: 3px 2px 4px -2px #000;
+	-webkit-box-shadow: 3px 2px 4px -2px #000;
+	box-shadow: 3px 2px 4px -2px #000;
+}
+
+	.mainContent h1 {
+		text-align: left;
+	}
+
+	.mainContent fieldset {
+		padding: 50px;
+		border: none;
+	}
+
+	.mainContent legend {
+		color: #000;
+		position: absolute;
+		margin-top: -40px;
+		text-transform: uppercase;
+		font-size: 27px;
+	}
+
+	.mainContent input {
+		border: none;
+		border-bottom: 1px solid #c0c0c0;
+		margin: 20px 0px;
+		padding-bottom: 8px;
+		padding-left: 4px;
+		font-weight: bold;
+	}
+
+		.mainContent input:focus {
+			outline: none;
+			border-bottom: 2px solid #006400;
+		}
+
+		.mainContent input[type="submit"] {
+			background-color: #3CB371;
+			color: #fff;
+			padding: 10px 20px;
+			text-transform: uppercase;
+		}
+
+.inputField {
+	float: left;
+	width: 33%;
+}
+
+a {
+	padding: 12px 18px;
+	border: none;
+	margin: 5px 0;
+	opacity: 0.85;
+	font-size: 17px;
+	line-height: 20px;
+	text-decoration: none;
+	width: 180px;
+	text-align: center;
+	display: block;
+}
+
+	a:hover {
+		opacity: 1;
+	}
