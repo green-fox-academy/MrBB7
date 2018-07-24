@@ -1,0 +1,104 @@
+﻿
+<style>
+
+    body {
+        color: darkgray;
+        font-family: Verdana;
+        font-size: 10px;
+    }
+
+    table {
+        border-spacing: 0.5rem;
+        font-family: Calibri;
+        border-collapse: collapse;
+        border-radius: 2px;
+    }
+
+    th {
+        background: #0f0f0f;
+        color: #9f9f9f;
+        padding: 2rem;
+        text-align: left;
+        font-size: 32px;
+        border-bottom: 5px solid gray;
+    }
+
+    #month {
+        width: 400px;
+        border-right: 1px solid gray;
+    }
+
+    #sales {
+        width: 500px;
+    }
+
+    td {
+        font-family: Cambria;
+        color: gray;
+        font-size: 26px;
+        border: 1px solid #999;
+        padding: 2rem;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #fff;
+    }
+
+    tr:nth-child(even) {
+        background-color: #eee;
+    }
+</style>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Index</th>
+            <th>Name</th>
+            <th>AnimalType</th>
+            <th>IsKing</th>
+            <th>IsGoodBoi</th>
+            <th>Balance</th>
+        </tr>
+        @for (int i = 0; i < Model.Count; i++)
+        {
+            <tr>
+                <td>@i</td>
+                <td>@Model[i].Name</td>
+                <td>@Model[i].AnimalType</td>
+                <td>
+                    @if (Model[i].IsKing)
+                    {
+                        <p>Yes</p>
+                    }
+                    else
+                    {
+                        <p>No</p>
+                    }
+                </td>
+                <td>
+                    @if (Model[i].IsGoodBoi)
+                    {
+                        <p>Yes</p>
+                    }
+                    else
+                    {
+                        <p>No</p>
+                    }
+                </td>
+                <td>@Model[i].Balance</td>
+            </tr>
+        }
+    </table>
+    <form action="/changinbalance/" method="post">
+        <label>Index</label><input type="number" name="index" />
+                            <button type="submit" value="Submit">ChangingBalance</button>
+    </form>
+    <form action="/addAnimal/" method="get">
+        <button type="submit" value="Submit">Add Bank Account</button>
+    </form>
+</body>
+</html>

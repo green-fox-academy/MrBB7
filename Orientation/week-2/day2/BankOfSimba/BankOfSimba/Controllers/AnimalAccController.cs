@@ -7,49 +7,54 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BankOfSimba.Controllers
 {
+    [Route("")]
     public class AnimalAccController : Controller
     {
-        public IActionResult Index()
+        static List<BankAccount> bankAccounts = new List<BankAccount>
         {
-            return View();
-        }
+            new BankAccount("Simba", 2000, "Lion"),
+            new BankAccount("Timon", 15100, "Zuricata"),
+            new BankAccount("Pumba", 30000, "Pig"),
+            new BankAccount("Nala", 2000, "Lioness"),
+        };
 
+        [Route("simba")]
         public IActionResult Simba()
         {
-            var bankAccount = new BankAccount()
-            {
-                Name = "Simba",
-                Balance = 2000,
-                AnimalType = "Lion"
-
-            };
-            return View(bankAccount);
+            return View(bankAccounts[0]);
         }
 
-        public IActionResult Accounts()
+        [Route("bankAccounts")]
+        public IActionResult BankAccounts()
         {
-            AccountsInTheBank accountsInTheBank = new AccountsInTheBank();
 
-            return View(accountsInTheBank);
+            bankAccounts[0].MakeKing();
+            bankAccounts[3].MakeBad();
+
+            return View(bankAccounts);
         }
 
         [HttpPost]
         [Route("changinbalance")]
-        public IActionResult ChangingBalance(string type)
+        public IActionResult ChangingBalance(int index)
         {
-            accountsInTheBank.AccountsInTheBank(type);
+            bankAccounts[index].RaiseBalance();
+            return View("bankAccounts", bankAccounts);
+        }
 
-            return RedirectToAction("Accounts");
+        [HttpGet]
+        [Route("addAnimal")]
+        public IActionResult AddAnimal()
+        {
+            return View("AddAnimal");
         }
 
         [HttpPost]
-        [Route("AddNewAccount")]
-        public IActionResult AddNewAccount(BankAccount account)
+        [Route("addAnimal")]
+        public IActionResult AddAnimal(string name, double balance, string animalType)
         {
-            accountsInTheBank.AccountsInTheBank.Add(account);
-
-            return RedirectToAction("Accounts");
+            bankAccounts.Add(new BankAccount(name, balance, animalType));
+            return RedirectToAction("bankAccounts", bankAccounts);
         }
     }
-}
 }

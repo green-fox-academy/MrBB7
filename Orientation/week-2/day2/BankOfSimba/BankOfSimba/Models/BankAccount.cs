@@ -9,7 +9,7 @@ namespace BankOfSimba.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public int Balance { get; set; }
+        public double Balance { get; set; }
         public string AnimalType { get; set; }
         public bool IsKing { get; set; }
         public bool IsGoodBoi { get; set; }
@@ -18,28 +18,28 @@ namespace BankOfSimba.Models
         {
         }
 
-        public BankAccount(int id, string name, int balance, string animal, bool isKing)
+        public BankAccount(string name, double balance, string animalType)
         {
-            Id = id;
+            IsKing = false;
+            IsGoodBoi = true;
             Name = name;
             Balance = balance;
-            AnimalType = animal;
-            IsKing = isKing;
+            AnimalType = animalType;
         }
 
-        public void ChangingBalance(string type)
+        public void MakeKing()
         {
-            if (type.ToLower().Equals(AnimalType.ToLower()))
-            {
-                if (IsKing)
-                {
-                    Balance += 100;
-                }
-                else
-                {
-                    Balance += 10;
-                }
-            }
+            IsKing = true;
+        }
+
+        public void MakeBad()
+        {
+            IsGoodBoi = false;
+        }
+
+        public void RaiseBalance()
+        {
+            Balance += IsKing ? 100 : 10;
         }
     }
 }
