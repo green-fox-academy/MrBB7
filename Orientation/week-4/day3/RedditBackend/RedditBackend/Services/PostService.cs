@@ -18,13 +18,22 @@ namespace RedditBackend.Services
 
         public void AddPost(Post post)
         {
+            post.Score = 0;
+            post.DateCurrent = (int)ConvertToUnixDateCurrent(DateTime.Now);
             postsRepo.Create(post);
+        }
+
+        private double ConvertToUnixDateCurrent(DateTime date)
+        {
+            DateTime origin = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+            TimeSpan diff = date.ToUniversalTime() - origin;
+            return Math.Floor(diff.TotalSeconds);
         }
 
         public void DeleteAPost(int id)
         {
             Post postToDelete = GetAPost(id);
-            postsRepo.Update(postToDelete);
+            postsRepo.Delete(postToDelete);
         }
 
         public void DownVote(int id)
@@ -44,7 +53,7 @@ namespace RedditBackend.Services
             Post postToEdit = GetAPost(id);
             postToEdit.Title = post.Title;
             postToEdit.Url = post.Url;
-            postsRepo.Update(post);
+            postsRepo.Update(postToEdit);
         }
 
         public void UpVote(int id)

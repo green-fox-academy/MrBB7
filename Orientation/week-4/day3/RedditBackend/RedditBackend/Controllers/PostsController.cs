@@ -24,7 +24,7 @@ namespace RedditBackend.Controllers
         }
 
         [HttpPost("/posts")]
-        public IActionResult PostAPost(Post post)
+        public IActionResult PostAPost([FromBody]Post post)
         {
             postsDatabase.AddPost(post);
             return RedirectToAction("List");
@@ -52,7 +52,7 @@ namespace RedditBackend.Controllers
         }
 
         [HttpPut("/posts/{id}")]
-        public IActionResult Put(Post post, int id)
+        public IActionResult Put([FromBody]Post post, [FromQuery]int id)
         {
             postsDatabase.UpdatePost(post, id);
             return RedirectToAction("List");

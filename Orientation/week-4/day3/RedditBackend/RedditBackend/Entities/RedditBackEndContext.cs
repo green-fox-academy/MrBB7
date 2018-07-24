@@ -10,7 +10,6 @@ namespace RedditBackend.Entities
     public class RedditBackendDbContext : DbContext
     {
         public DbSet<Post> Posts { get; set; }
-        public DbSet<User> Users { get; set; }
 
         public RedditBackendDbContext(DbContextOptions<RedditBackendDbContext> options) : base(options)
         {
@@ -18,9 +17,6 @@ namespace RedditBackend.Entities
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<User>()
-                .HasMany(x => x.Posts)
-                .WithOne(x => x.User);
         }
     }
 }
