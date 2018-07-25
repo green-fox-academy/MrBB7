@@ -32,7 +32,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/getForecastButton"
         android:layout_width="111dp"
         android:layout_height="59dp"
         android:layout_marginTop="20dp"
@@ -49,7 +49,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/getForecastButton"
         app:srcCompat="@drawable/ic_temperaturejo" />
 
     <ImageView
@@ -60,7 +60,7 @@
         app:layout_constraintEnd_toStartOf="@+id/imageView"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/getForecastButton"
         app:srcCompat="@drawable/ic_sunnyjo" />
 
     <ImageView
@@ -71,6 +71,6 @@
         app:layout_constraintEnd_toStartOf="@+id/imageView2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/getForecastButton"
         app:srcCompat="@drawable/ic_remjo" />
 </android.support.constraint.ConstraintLayout>
