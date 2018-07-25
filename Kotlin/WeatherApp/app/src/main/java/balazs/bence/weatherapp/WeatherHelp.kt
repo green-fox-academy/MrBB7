@@ -5,23 +5,29 @@ import retrofit2.Callback
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
+import retrofit2.http.Query
 
 interface WeatherAPI {
-    @GET("bins/eblo2")
-    fun getForecast() : Call<List<Forecast>>
+    @GET("yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D\"Budapest\")&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys")
+    fun getForecast() : Call<Weather>
 }
 
-class Forecast(val high: String, val low: String)
+class Weather(val query: WeatherQuery)
+class WeatherQuery(val results: WeatherResult)
+class WeatherResult(val channel: WeatherChannel)
+class WeatherChannel(val title: String, val item: WeatherItem)
+class WeatherItem(val forecast: List<Forecast>)
+class Forecast(val date: String, val day: String, val high: String, val low: String, val text: String)
 
 class WeatherRetriever {
     val service : WeatherAPI
 
     init {
-        val retrofit = Retrofit.Builder().baseUrl("https://api.myjson.com/").addConverterFactory(GsonConverterFactory.create()).build()
+        val retrofit = Retrofit.Builder().baseUrl("https://query.yahooapis.com/v1/public/").addConverterFactory(GsonConverterFactory.create()).build()
         service = retrofit.create(WeatherAPI::class.java)
     }
 
-    fun getForecast(callback: Callback<List<Forecast>>) {
+    fun getForecast(callback: Callback<Weather>) {
          val call = service.getForecast()
         call.enqueue(callback)
     }

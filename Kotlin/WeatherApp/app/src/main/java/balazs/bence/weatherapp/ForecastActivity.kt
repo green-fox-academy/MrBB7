@@ -14,28 +14,39 @@ class ForecastActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_forecast)
 
-        var listView = findViewById<ListView>(R.id.forecastListView)
-
-        var randomThings = listOf<String>("some wheather thing", "some wheather thing", "some wheather thing", "some wheather thing", "some wheather thing", "some wheather thing")
-
-        var adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, randomThings)
-
-        listView.adapter = adapter
-
-
-
         var retriever = WeatherRetriever()
 
-        val callback = object : Callback<List<Forecast>> {
+        val callback = object : Callback<Weather> {
 
-            override fun onResponse(call: Call<List<Forecast>>?, response: Response<List<Forecast>>?) {
-                println("We got a response")
-                println(response?.body())
+            override fun onResponse(call: Call<Weather>?, response: Response<Weather>?) {
+                println("It's working")
+
+                title = response?.body()?.query?.results?.channel?.title
+
+                var forecasts = response?.body()?.query?.results?.channel?.item?.forecast
+
+                var forecastStrings = mutableListOf<String>()
+
+                if (forecasts != null){
+                    for (forecast in forecasts) {
+                        val newString = "${forecast.date} - High:${forecast.high} Low:${forecast.low} - ${forecast.text}"
+                        forecastStrings.add(newString)
+
+                    }
+                }
+
+                var listView = findViewById<ListView>(R.id.forecastListView)
+
+                var adapter = ArrayAdapter(this@ForecastActivity, android.R.layout.simple_list_item_1, forecastStrings)
+
+                listView.adapter = adapter
             }
 
-            override fun onFailure(call: Call<List<Forecast>>?, t: Throwable?) {
-                println("We failed to get a response")
+            override fun onFailure(call: Call<Weather>?, t: Throwable?) {
+                println("it's not working")
             }
+
+
 
 
         }
