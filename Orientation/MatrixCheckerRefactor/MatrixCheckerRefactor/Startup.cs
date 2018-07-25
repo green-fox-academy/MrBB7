@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MatrixCheckerRefactor.Entities;
+using MatrixCheckerRefactor.Repositories;
+using MatrixCheckerRefactor.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -25,6 +27,9 @@ namespace MatrixCheckerRefactor
         {
             string connection = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=MatrixCheckerRefactor;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             services.AddDbContext<MatrixDbContext>(options => options.UseSqlServer(connection));
+            services.AddTransient<MatrixDbContext>();
+            services.AddTransient<MatrixRepository>();
+            services.AddTransient<IService, MatrixService>();
             services.AddMvc();
         }
 

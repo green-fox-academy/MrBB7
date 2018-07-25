@@ -1,0 +1,18 @@
+﻿@model string
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Matrix Checker</h1>
+<h3>Check if your matrix is increasing!</h3>
+<h3>Add a matrix and sit back while the evaluation happens</h3>
+
+<h3>Enter your matrix here:</h3>
+<form action="/matrix" method="post">
+    <textarea name="inputMatrix" rows="10" cols="30"></textarea>
+    <button type="submit">Submit</button>
+</form>
+
+<div><br /><h2>Result:</h2></div>
+<div name="result" style="color:red"><p>@Model</p></div>
