@@ -8,8 +8,8 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface WeatherAPI {
-    @GET("yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D\"Budapest\")&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys")
-    fun getForecast() : Call<Weather>
+    @GET("yql?&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys")
+    fun getForecast(@Query("q") q: String) : Call<Weather>
 }
 
 class Weather(val query: WeatherQuery)
@@ -27,8 +27,10 @@ class WeatherRetriever {
         service = retrofit.create(WeatherAPI::class.java)
     }
 
-    fun getForecast(callback: Callback<Weather>) {
-         val call = service.getForecast()
+    fun getForecast(callback: Callback<Weather>, searchTerm: String) {
+
+         val q = "select * from weather.forecast where woeid in (select woeid from geo.places(1) where text=\"$searchTerm\")"
+         val call = service.getForecast(q)
         call.enqueue(callback)
     }
 }

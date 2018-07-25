@@ -45,12 +45,10 @@ class ForecastActivity : AppCompatActivity() {
             override fun onFailure(call: Call<Weather>?, t: Throwable?) {
                 println("it's not working")
             }
-
-
-
-
         }
 
-        retriever.getForecast(callback)
+        val searchTerm = intent.extras.getString("searchTerm")
+
+        retriever.getForecast(callback, searchTerm)
     }
 }
