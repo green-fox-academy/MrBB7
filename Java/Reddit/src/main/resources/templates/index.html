@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Redditke</title>
+</head>
+<body>
+<a href="/newpost">ADD</a>
+<h1 style="text-align: center;">Trending Posts</h1>
+<br/><br/>
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Score</th>
+        <th>Ups</th>
+        <th>Downs</th>
+        <th>Title</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="post : ${posts}">
+        <td th:text="${post.id}">
+        <td th:text="${post.vote}">
+        <td><form action="/upvote" method="post">
+            <button type="submit" name="id" th:value="${post.id}">+</button>
+        </form> </td>
+        <td><form action="/downvote" method="post">
+            <button type="submit" name="id" th:value="${post.id}">-</button>
+        </form> </td>
+        <td><a th:href="${post.url}" th:text="${post.title}"/></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
