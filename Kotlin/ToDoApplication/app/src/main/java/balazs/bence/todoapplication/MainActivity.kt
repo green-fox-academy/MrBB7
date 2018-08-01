@@ -6,6 +6,7 @@ import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import io.realm.Realm
 
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -19,6 +20,24 @@ class MainActivity : AppCompatActivity() {
         fab.setOnClickListener {
             var addIntent = Intent(this, AddTodoActivity::class.java)
             startActivity(addIntent)
+        }
+
+        val realm = Realm.getDefaultInstance()
+
+        var myDog = realm.createObject(Dog::class.java)
+        myDog.name = "comehere"
+        myDog.age = 1
+
+        realm.beginTransaction()
+
+        realm.copyToRealm(myDog)
+
+        realm.commitTransaction()
+
+        var query = realm.where(Dog::class.java)
+        val results = query.findAll()
+        for (dog in results) {
+            println(dog.name)
         }
     }
 
