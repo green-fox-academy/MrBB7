@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/getNewStuffButton"
         android:layout_width="189dp"
         android:layout_height="43dp"
         android:layout_marginEnd="8dp"

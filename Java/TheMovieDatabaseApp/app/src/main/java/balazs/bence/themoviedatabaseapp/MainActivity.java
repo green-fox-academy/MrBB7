@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button getMovieByIDButton = (Button)findViewById(R.id.searchMovieByIdButton);
+        Button getMovieByIDButton = (Button) findViewById(R.id.searchMovieByIdButton);
         getMovieByIDButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -21,10 +21,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(searchIntent);
             }
         });
-    }
 
-    @Override
-    public void onClick(View view) {
-
+        Button discoverButton = (Button) findViewById(R.id.getNewStuffButton);
+        discoverButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent discoverIntent = new Intent(MainActivity.this, DiscoverNewFilmsActivity.class);
+                startActivity(discoverIntent);
+            }
+        });
     }
 }
